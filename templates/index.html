@@ -13,16 +13,31 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 class="title">Test</h1>
-    
-    <button name="button" class="talk btn-large">Search By Voice</button>
-    
-    {{suggested}}
-    <p class="content"></p>
-    <p>{{result}}</p>
-    <form method="POST" class="hidden">
-        <input type="text" id="query" name="query">
-        <input type="submit" id="serSub" value="0">
+
+    <div class="row">
+        <div class="col s12 center-align mainSelect">
+            <section class="stage">
+                <figure class="ball">
+                    <span class="shadow"></span>
+                    <span class="eight"></span>
+                </figure>
+                <div class="contain-text">
+                    <h1 class="title">Wiki Voice<br>Search</h1>
+                </div>
+                <button name="button" id="button" class="talk btn-large">Search By Voice</button>
+            </section>            
+        </div>
+    </div>  
+    <button id="play" class="hidden"></button>
+    <h1 class="inputVoice"></h1>
+    <div class="row">
+        <div class="col s8 offset-s2 center-align black">
+            <p class="content white-text">{{result}}</p>
+        </div>
+    </div>
+    <form method="POST" class="col s12 center-align hidden">
+        <input type="text" id="query" name="query" class="input-field" placeholder="Enter Search">
+        <input type="submit" id="serSub">
     </form>
 
 

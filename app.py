@@ -22,11 +22,9 @@ def home():
             try:
                 result = wikipedia.summary(query)
             except wikipedia.exceptions.DisambiguationError:
-                result = []
-                suggested = wikipedia.search(query, results=3)
-                length = len(suggested)
-                for x in range(length):
-                    result.append(suggested[x])
+                stra = "There May Be Multiple Articles About The Topic "
+                strb = " Please Be More Specific!"
+                result = stra + query + strb
             return render_template("index.html",
                                    result=result)
         except:
@@ -38,4 +36,4 @@ def home():
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=False)
+            debug=True)
