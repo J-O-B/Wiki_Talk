@@ -3,6 +3,8 @@ from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
 import wikipedia
+if os.path.exists("env.py"):
+    import env
 
 app = Flask(__name__)
 
