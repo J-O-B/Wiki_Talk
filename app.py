@@ -23,7 +23,7 @@ def home():
                 result = wikipedia.summary(query)
             except wikipedia.exceptions.DisambiguationError:
                 stra = "There May Be Multiple Articles About The Topic "
-                strb = " Please Be More Specific!"
+                strb = ". Please Be More Specific!"
                 result = stra + query + strb
             return render_template("index.html",
                                    result=result)
@@ -36,4 +36,4 @@ def home():
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)

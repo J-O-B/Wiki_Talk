@@ -1,9 +1,5 @@
-Project idea:
+# Welcome To Wiki Search
 
-Flask & Wikipedia Python Project. Use javascript speech utterance, or text input to feed back to python via POST.
+## View The Project: [Wiki Voice Search](https://wiki-voice-search.herokuapp.com/)
 
-Check if Wikipedia article exists.
-
-If exists:
-
-Read out summary
+Please note that this app is not available on some handheld devices due to compatability issues.

@@ -10,6 +10,7 @@ const content = $('.content').text();
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
 
+
 recognition.onstart = function(){
     console.log("Listening");
 }
@@ -26,13 +27,19 @@ recognition.onresult = function(event){
 $('.talk').click(function(){
     recognition.start();
 })
+let voices = [];
+window.speechSynthesis.onvoiceschanged = function() {
+  voices = window.speechSynthesis.getVoices();
+};
 
 function readOutLoud(message){
     const speech = new SpeechSynthesisUtterance();
+    speech.voice = voices[5];
+    speech.lang = "en-US";
     speech.text = message;
     speech.volume = 1;
-    speech.pitch = 0.8;
-    speech.rate = 1.3;
+    speech.pitch = 0.9;
+    speech.rate = 1.1;
     window.speechSynthesis.speak(speech);
     console.log("speaking");
 }
