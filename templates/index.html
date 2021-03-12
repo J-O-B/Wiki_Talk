@@ -35,8 +35,13 @@
             <p class="content white-text">{{result}}</p>
         </div>
     </div>
-    <form method="POST" class="col s12 center-align">
-        <input type="text" id="query" name="query" class="input-field" placeholder="Enter Search">
+    <form method="POST" class="col s6 offset-s3 center-align">
+        <div class="row">
+            <div class="input-field col s6 offset-s3">
+                <label for="query">For Mobile Users</label>
+                <input type="text" id="query" name="query" placeholder="Enter Search">
+            </div>
+        </div>
         <input type="submit" id="serSub">
     </form>
     <div id="langList"></div>

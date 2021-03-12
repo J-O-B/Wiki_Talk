@@ -34,8 +34,8 @@ window.speechSynthesis.onvoiceschanged = function() {
 
 function readOutLoud(message){
     const speech = new SpeechSynthesisUtterance();
-    speech.voice = voices[5];
-    speech.lang = "en-US";
+    speech.voice = voices[6];
+    speech.lang = "en-GB";
     speech.text = message;
     speech.volume = 1;
     speech.pitch = 0.9;
